@@ -1,0 +1,47 @@
+---
+title: "20240910_Lecture"
+author: L
+output: html_document
+date: "2024-09-10"
+  toc: true
+  toc_float: true
+  code_Folding: hide
+editor_options: 
+  chunk_output_type: console
+---
+
+I'm an R Markdown document! 
+
+# Section 1
+
+Here's a **code chunk** that samples from 
+a _normal distribution_:
+
+```{r echo = FALSE}
+samp = rnorm(100)
+length(samp)
+```
+
+# Section 2
+
+I can take the mean of the sample, too!
+The mean is `r mean(samp)`.
+
+# Learning assessment 1
+
+This is code for the learning assessment for P1805. It create "la_df" and then plots a histogram.
+
+```{r la_chunk}
+library(tidyverse)
+
+la_df =
+  tibble(
+    sample = rnorm(n = 500, mean = 1),
+    log_samp = sample > 0,
+    num_samp = abs(sample)
+  )
+
+ggplot( la_df, aes(x = num_samp)) + 
+  geom_histogram()
+```
+
