@@ -1,1 +1,3 @@
-# building_blocks
+# building blocks
+
+This repo contains code form the building blocks topic 
